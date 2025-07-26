@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OSINT Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container" id="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <p id="loginError" class="error"></p>
+  </div>
+
+  <div class="dashboard hidden" id="dashboard">
+    <h1>🔍 CristianValta OSINT Tool</h1>
+
+    <section>
+      <h2>📌 OSINT NIK</h2>
+      <input type="text" id="nikInput" placeholder="Masukan NIK" />
+      <button onclick="submitNIK()">Submit</button>
+      <div id="nikResults"></div>
+    </section>
+
+    <section>
+      <h2>🌐 IP Tracking</h2>
+      <input type="text" id="ipInput" placeholder="Masukan IP Address" />
+      <button onclick="trackIP()">Track</button>
+      <div id="ipResult"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
